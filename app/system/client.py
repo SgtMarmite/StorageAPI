@@ -64,6 +64,10 @@ class KeboolaStorageAPI:
         ConnectionError
             In case of target url being unreachable.
         """
+
+        if self.silent:
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
         offset = 0
         results = []
 
@@ -73,8 +77,6 @@ class KeboolaStorageAPI:
             }
 
             try:
-                if self.silent:
-                    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
                 r = requests.get(self.url,
                                  headers=self.headers,
