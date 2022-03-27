@@ -4,14 +4,15 @@ FROM python:3.10.4-slim-bullseye
 # Create a user and a group called 'app' to run the processes.
 RUN adduser --system --group app
 
-# Place the application components in a dir below the root dir
 COPY /system/ /app/
 COPY requirements.txt ./
+COPY config.json /app/
 
 
-# Install from the requirements.txt we copied above
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+ENV PYTHONUNBUFFERED=1
 
 # Hand everything over to the 'app' user
 RUN chown -R app:app /app
