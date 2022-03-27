@@ -8,7 +8,7 @@ import urllib3
 class KeboolaStorageAPI:
     """A class used for API call to https://keboola.docs.apiary.io/#reference/files/list-files/list-files
     Auth token is provided by user via a config.json file stored in os.path.dirname(os.path.abspath(__file__)).
-    Uses query parameter showExpired=true. See: https://keboola.docs.apiary.io/#reference/files/list-files/list-files
+    Uses query parameter showExpired=true. See docs above for more info.
     Uses limit and offset query parameters to iterate through the results.
 
     Parameters
