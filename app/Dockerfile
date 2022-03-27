@@ -22,4 +22,4 @@ USER app
 # Make the directory the working directory for subsequent commands
 WORKDIR /app
 
-RUN python3 get_data.py -u
+RUN python3 get_data.py
