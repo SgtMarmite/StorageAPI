@@ -21,7 +21,7 @@ class KeboolaStorageAPI:
         https://keboola.docs.apiary.io/#reference/files/list-files/list-files
 
     silent: bool, default=True
-        Set to true if you want to receive InsecureRequestWarning
+        Set to false if you want to receive InsecureRequestWarning
 
     Attributes
     ----------
