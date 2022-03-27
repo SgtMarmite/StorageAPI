@@ -50,14 +50,14 @@ class KeboolaStorageAPI:
         except FileNotFoundError:
             raise FileNotFoundError('File config.json not found.')
 
-    def get(self) -> list:
+    def get_to_list(self) -> list:
         """Performs a request or a series of requests to https://connection.eu-central-1.keboola.com/v2/storage/files.
-        To be used with methods with like to_csv.
+        To be used with methods like to_csv.
 
         Returns
         -------
         results : list
-            list of dicts with results
+            list of dicts with results from API calls
 
         Raises
         ------
@@ -109,7 +109,7 @@ class KeboolaStorageAPI:
 
         """
 
-        results = self.get()
+        results = self.get_to_list()
         df = pd.DataFrame.from_records(results)
         # For now uses index=False.
         df.to_csv(os.path.join(self.path, output_filename), index=False, sep=sep)
