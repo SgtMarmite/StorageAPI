@@ -1,0 +1,4 @@
+.idea
+app/__pycache__
+app/config.json
+output/*.csv
