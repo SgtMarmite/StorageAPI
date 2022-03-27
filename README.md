@@ -1,7 +1,7 @@
 # StorageAPI
  Keboola Storage API client
 
-# How to use
+# How to use with Docker:
 ```
 git clone https://github.com/SgtMarmite/StorageAPI.git
 cd StorageAPI
