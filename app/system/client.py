@@ -40,8 +40,9 @@ class KeboolaStorageAPI:
     def __init__(self, url: str, limit: int = 100, silent: bool = True):
         self.url = url
         self.limit = limit
-        self.path = os.path.dirname(os.path.abspath(__file__))
         self.silent = silent
+
+        self.path = os.path.dirname(os.path.abspath(__file__))
 
         try:
             with open(os.path.join(self.path, 'config.json')) as json_file:
