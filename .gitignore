@@ -1,4 +1,4 @@
 .idea
 app/__pycache__
 app/output/*.csv
-app/*.json
+app/config.json
