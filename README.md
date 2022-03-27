@@ -1,12 +1,12 @@
 # StorageAPI
- Keboola Storage API task
+ Keboola Storage API client
 
 # How to use
 ```
 git clone https://github.com/SgtMarmite/StorageAPI.git
 cd StorageAPI
 *provide valid token in /app/config.json
-docker build . -t keboola
-docker create --name dummy keboola
+docker build . -t KeboolaAPIClient
+docker create --name dummy KeboolaAPIClient
 docker cp dummy:/app/parsed_result.csv  output/
 ```
