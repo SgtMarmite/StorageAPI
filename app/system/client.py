@@ -13,8 +13,8 @@ class KeboolaStorageAPI:
 
     Parameters
     ----------
-    url: str, mandatory
-        Target url
+    url: str
+        Target url, mandatory parameter
 
     limit: str, default=100
         Pagination limit
