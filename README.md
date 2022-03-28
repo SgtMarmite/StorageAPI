@@ -5,7 +5,7 @@
 # How to use with Docker:
 ```
 git clone https://github.com/SgtMarmite/StorageAPI.git
-cd StorageAPI
+cd .\StorageAPI\app\
 *provide valid token in /app/config.json
 docker build . -t KeboolaAPIClient
 docker create --name dummy KeboolaAPIClient
