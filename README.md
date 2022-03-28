@@ -1,6 +1,6 @@
 # StorageAPI
  Keboola Storage API client <br />
- written in Python:3.10.4
+ written in Python 3.10.4
 
 # How to use with Docker:
 ```
